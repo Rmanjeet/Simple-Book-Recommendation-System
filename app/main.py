@@ -24,6 +24,3 @@ def search():
     query = request.form['search_text']
     search_dict = keywordSearch(es, query)
     return render_template('search.html', search_dict = search_dict, book=query)
-
-if __name__ == '__main__':
-    app.run(debug=True)
